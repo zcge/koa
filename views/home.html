@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/iview/dist/styles/iview.css">
+    
+</head>
+<body>
+    <div id="app">
+    <i-button @click="show">Click me!</i-button>
+    <Modal :visible.sync="visible" title="Welcome">欢迎使用 iView</Modal>
+</div>
+
+    <script src="./js/vue/dist/vue.min.js"></script>
+    <script src="./js/iview/dist/iview.min.js"></script>
+   <script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            }
+        }
+    })
+  </script>
+</body>
+</html>

@@ -8,19 +8,21 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
-
-const index = require('./routes/index');
-const users = require('./routes/users');
+const path = require('path');
 const port = 3000;
-// middlewares
+
+const controller = require('./controller');
+
+app.use(views(__dirname+ '/views', { map: {html: 'nunjucks' }}))
 app.use(convert(bodyparser));
 app.use(convert(json()));
 app.use(convert(logger()));
+
 app.use(require('koa-static')(__dirname + '/public'));
 
-app.use(views(__dirname + '/views', {
-    extension: 'jade'
-}));
+
+
+
 
 // logger
 app.use(async(ctx, next) => {
@@ -30,11 +32,7 @@ app.use(async(ctx, next) => {
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-router.use('/', index.routes(), index.allowedMethods());
-router.use('/users', users.routes(), users.allowedMethods());
-
-app.use(router.routes(), router.allowedMethods());
-// response
+app.use(controller());
 
 app.on('error', function(err, ctx) {
     console.log(err)
