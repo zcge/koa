@@ -11,7 +11,7 @@ const logger = require('koa-logger');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
-
+const port = 3000;
 // middlewares
 app.use(convert(bodyparser));
 app.use(convert(json()));
@@ -19,15 +19,15 @@ app.use(convert(logger()));
 app.use(require('koa-static')(__dirname + '/public'));
 
 app.use(views(__dirname + '/views', {
-  extension: 'jade'
+    extension: 'jade'
 }));
 
 // logger
-app.use(async (ctx, next) => {
-  const start = new Date();
-  await next();
-  const ms = new Date() - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+app.use(async(ctx, next) => {
+    const start = new Date();
+    await next();
+    const ms = new Date() - start;
+    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
 router.use('/', index.routes(), index.allowedMethods());
@@ -36,10 +36,13 @@ router.use('/users', users.routes(), users.allowedMethods());
 app.use(router.routes(), router.allowedMethods());
 // response
 
-app.on('error', function(err, ctx){
-  console.log(err)
-  logger.error('server error', err, ctx);
+app.on('error', function(err, ctx) {
+    console.log(err)
+    logger.error('server error', err, ctx);
 });
 
+app.listen(port, function() {
+    console.info("监听端口号:" + port + "成功");
+})
 
 module.exports = app;
