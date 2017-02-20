@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/iview/dist/styles/iview.css">
+    <script src="./js/vue/dist/vue.min.js"></script>
+    <script src="./js/iview/dist/iview.min.js"></script>
+</head>
+
+<body>
+    <template>
+        <i-form v-ref:form-inline :model="formInline" :rules="ruleInline" inline>
+            <Form-item prop="user">
+                <i-input type="text" :value.sync="formInline.user" placeholder="Username">
+                    <Icon type="ios-person-outline" slot="prepend"></Icon>
+                </i-input>
+            </Form-item>
+            <Form-item prop="password">
+                <i-input type="password" :value.sync="formInline.password" placeholder="Password">
+                    <Icon type="ios-locked-outline" slot="prepend"></Icon>
+                </i-input>
+            </Form-item>
+            <Form-item>
+                <i-button type="primary" @click="handleSubmit('formInline')">登录</i-button>
+            </Form-item>
+        </i-form>
+    </template>
+</body>
+
+</html>
