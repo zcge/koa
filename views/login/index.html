@@ -3,35 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>登陆页面</title>
+    <title>DayUp工具记录工具</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./js/iview/dist/styles/iview.css">
-    <script src="./js/vue/dist/vue.min.js"></script>
-    <script src="./js/iview/dist/iview.min.js"></script>
+    <!-- ZUI 标准版压缩后的 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/zui/1.5.0/css/zui.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/rem.js"></script>
 </head>
 
 <body>
-    <template>
-        <i-form v-ref:form-inline :model="formInline" :rules="ruleInline" inline>
-            <Form-item prop="user">
-                <i-input type="text" :value.sync="formInline.user" placeholder="Username">
-                    <Icon type="ios-person-outline" slot="prepend"></Icon>
-                </i-input>
-            </Form-item>
-            <Form-item prop="password">
-                <i-input type="password" :value.sync="formInline.password" placeholder="Password">
-                    <Icon type="ios-locked-outline" slot="prepend"></Icon>
-                </i-input>
-            </Form-item>
-            <Form-item>
-                <i-button type="primary" @click="handleSubmit('formInline')">登录</i-button>
-            </Form-item>
-        </i-form>
-    </template>
+    <div class="topbar">
+        <div class="back"></div>
+        <div class="title">导航条</div>
+    </div>
+
+    <div class="row" style="height:3rem;">
+        <div class="col-xs-3" style="text-align: center;height: 100%;background-color:red;line-height: 1.53846154;">
+            用户名:
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-7">
+            <input type="text" class="form-control" placeholder="用户名">
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3" style="text-align: center;line-height: 100%;">
+            密码:
+        </div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-7">
+            <input type="password" class="form-control" placeholder="密码">
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script src="//cdn.bootcss.com/zui/1.5.0/lib/jquery/jquery.js"></script>
+    <script src="//cdn.bootcss.com/zui/1.5.0/js/zui.min.js"></script>
 </body>
 
 </html>
