@@ -3,48 +3,69 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DayUp工具记录工具</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
-    <!-- ZUI 标准版压缩后的 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/zui/1.5.0/css/zui.min.css">
-    <script src="./js/rem.js"></script>
+    <title>Document</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="./js/aui/css/aui.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
-<style>
-    .img1 {
-        margin-bottom: 1rem;
-    }
-    
-    .content80 {
-        margin-left: 10%;
-        width: 80%;
-        position: fixed;
-        bottom: 40px;
-    }
-    
-    .img1 {
-        position: fixed;
-        top: 50%;
-        margin-top: -6rem;
-    }
-</style>
 
 <body>
-    <div>
-        <h1 style="text-align: center;">我的APP</h1>
-        <img class="img1" src="./images/logo.png" alt="响应式图片测试" />
-        <div class="content80">
-            <a href="./login" class="btn btn-block btn-primary" type="button">登陆</a>
-            <button class="btn btn-block btn-primary" type="button">注册</button>
+    <header class="aui-bar aui-bar-nav">笔记工具</header>
+    <!--未登录-->
+    <div class="hs-header aui-bg-indigo">
+        <div class="hs-text-center">
+            <img class="hs-circle-img" src="./images/user-face-default.png" alt="头像" width="100%;">
+            <span>登陆/注册</span>
         </div>
-
     </div>
+    <!--登陆后-->
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-list-in">
+            <li class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont aui-icon-pencil"></i>
+                </div>
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    <div class="aui-list-item-title">说明</div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont aui-icon-phone"></i>
+                </div>
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    <div class="aui-list-item-title">意见反馈</div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont aui-icon-gear"></i>
+                </div>
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    <div class="aui-list-item-title">设置</div>
+                </div>
+            </li>
 
-    <!-- ZUI Javascript 依赖 jQuery -->
-    <script src="//cdn.bootcss.com/zui/1.5.0/lib/jquery/jquery.js"></script>
-    <script src="//cdn.bootcss.com/zui/1.5.0/js/zui.min.js"></script>
+        </ul>
+    </div>
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item aui-active" tapmode>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+        <div class="aui-bar-tab-item " tapmode>
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">首页</div>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <i class="aui-iconfont aui-icon-star"></i>
+            <div class="aui-bar-tab-label">收藏</div>
+        </div>
+    </footer>
+
+    <script src="./js/zepto/dist/zepto.min.js"></script>
+    <script src="./js/aui/script/api.js"></script>
 </body>
 
 </html>

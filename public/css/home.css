@@ -1,0 +1,24 @@
+.hs-body {
+    width: 100%;
+}
+
+.hs-header {
+    height: 6rem;
+    padding-top: 1rem;
+}
+
+.hs-text-center {
+    text-align: center;
+    line-height: 1.5;
+    display: block;
+    color: #fff;
+}
+
+.hs-circle-img {
+    width: 2rem;
+    margin: 0rem auto;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
