@@ -10,37 +10,38 @@
 </head>
 
 <body>
-    <ul class="aui-list aui-form-list">
-        <li class="aui-list-header">登陆</li>
-        <li class="aui-list-item">
-            <div class="aui-list-item-inner">
-                <div class="aui-list-item-label-icon">
-                    <i class="aui-iconfont aui-icon-mobile"></i>
+    <form method="post" action="loginAction">
+        <ul class="aui-list aui-form-list">
+            <li class="aui-list-header">已登陆</li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-mobile"></i>
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="username" class="username-input" name="name">
+                    </div>
                 </div>
-                <div class="aui-list-item-input">
-                    <input type="text" placeholder="username">
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-lock"></i>
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="password" placeholder="password" class="password-input" name="password">
+                    </div>
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-display"></i>
+                    </div>
                 </div>
-            </div>
-        </li>
-        <li class="aui-list-item">
-            <div class="aui-list-item-inner">
-                <div class="aui-list-item-label-icon">
-                    <i class="aui-iconfont aui-icon-lock"></i>
-                </div>
-                <div class="aui-list-item-input">
-                    <input type="password" placeholder="password">
-                </div>
-                <div class="aui-list-item-label-icon">
-                    <i class="aui-iconfont aui-icon-display"></i>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <div style="margin:1rem auto;text-align: center;">
-        <div class="aui-btn aui-btn-success">登陆</div>
-        <div class="aui-btn aui-btn-primary"><a href="./register" style="color:#fff;">注册</a></div>
-    </div>
-
+            </li>
+        </ul>
+        <div style="margin:1rem auto;text-align: center;">
+            <input class="aui-btn aui-btn-success login-btn" type="submit" value="登陆" />
+            <div class="aui-btn aui-btn-primary"><a href="./register" style="color:#fff;">注册</a></div>
+        </div>
+    </form>
     <script src="./js/zepto/dist/zepto.min.js"></script>
     <script src="./js/aui/script/api.js"></script>
 </body>

@@ -10,17 +10,20 @@ const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
 const path = require('path');
 const port = 3000;
-
 const controller = require('./controller');
-
-app.use(views(__dirname+ '/views', { map: {html: 'nunjucks' }}))
+const config = require("./config");
+const session = require("koa-session2")
+app.use(views(__dirname + '/views', { map: { html: 'nunjucks' } }))
 app.use(convert(bodyparser));
 app.use(convert(json()));
 app.use(convert(logger()));
 
 app.use(require('koa-static')(__dirname + '/public'));
 
-
+app.use(session({
+    key: "SESSIONID", //default "koa:sess"
+    maxAge: 500000000 //设置session超时时间
+}))
 
 
 
