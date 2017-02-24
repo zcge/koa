@@ -9,8 +9,6 @@ let login = async(ctx, next) => {
 let loginAction = async(ctx, next) => {
     let name = ctx.request.body.name;
     let password = ctx.request.body.password;
-    // let name = ctx.body.name;
-    // let password = ctx.body.password;
     //如果没有取到名字和密码，return
     if (!name && !password) {
         console.log(name, password);
