@@ -3,7 +3,6 @@ var User = require("../models/User.js");
 
 let login = async(ctx, next) => {
     await ctx.render("login/index.html");
-
 };
 
 let loginAction = async(ctx, next) => {

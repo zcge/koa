@@ -15,10 +15,17 @@
     <!--未登录-->
     <div class="hs-header aui-bg-indigo">
         <div class="hs-text-center">
+            {% if (user.user_name)%}
+            <img class="hs-circle-img" src="./images/user-face-default.png" alt="头像" width="100%;">
+            <a href="./loginOut" style="color:#fff;">
+                <span>登出 {{user.user_name}}</span>
+            </a>
+            {% else %}
             <a href="./login" style="color:#fff;">
                 <img class="hs-circle-img" src="./images/user-face-default.png" alt="头像" width="100%;">
                 <span>登陆/注册</span>
             </a>
+            {% endif %}
         </div>
     </div>
     <!--登陆后-->
