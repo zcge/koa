@@ -12,7 +12,25 @@ const path = require('path');
 const port = 3000;
 const controller = require('./controller');
 const config = require("./config");
-const session = require("koa-session2")
+const session = require("koa-session2");
+// var http = require('http');
+// var captchapng = require('captchapng');
+// http.createServer(function(request, response) {
+//     if (request.url == '/captcha.png') {
+//         var num = parseInt(Math.random() * 9000 + 1000);
+//         var p = new captchapng(80, 30, num); // width,height,numeric captcha
+//         p.color(0, 0, 0, 0); // First color: background (red, green, blue, alpha)
+//         p.color(80, 80, 80, 255); // Second color: paint (red, green, blue, alpha)
+//         console.log(num);
+//         var img = p.getBase64();
+//         var imgbase64 = new Buffer(img, 'base64');
+//         response.writeHead(200, {
+//             'Content-Type': 'image/png'
+//         });
+//         response.end(imgbase64);
+//     } else response.end('');
+// }).listen(8181);
+
 app.use(views(__dirname + '/views', { map: { html: 'nunjucks' } }))
 app.use(convert(bodyparser));
 app.use(convert(json()));

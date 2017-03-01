@@ -19,7 +19,7 @@
                         <i class="aui-iconfont aui-icon-mobile"></i>
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="text" placeholder="username" class="username-input" name="name">
+                        <input type="text" placeholder="账号" class="username-input" name="name">
                     </div>
                 </div>
             </li>
@@ -29,14 +29,28 @@
                         <i class="aui-iconfont aui-icon-lock"></i>
                     </div>
                     <div class="aui-list-item-input">
-                        <input type="password" placeholder="password" class="password-input" name="password">
+                        <input type="password" placeholder="密码" class="password-input" name="password">
                     </div>
                     <div class="aui-list-item-label-icon">
                         <i class="aui-iconfont aui-icon-display"></i>
                     </div>
                 </div>
             </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label-icon">
+                        验证码
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="验证码" class="password-input" name="verifycode" style="text-indent: 4rem;" maxlength="4">
+                    </div>
+                    <div class="aui-list-item-label-icon">
+                        <img src="/captchapng" alt="验证码" class="captchapng" />
+                    </div>
+                </div>
+            </li>
         </ul>
+
         <div style="margin:1rem auto;text-align: center;">
             <input class="aui-btn aui-btn-success login-btn" type="submit" value="登陆" />
             <div class="aui-btn aui-btn-primary"><a href="./register" style="color:#fff;">注册</a></div>
@@ -44,6 +58,11 @@
     </form>
     <script src="./js/zepto/dist/zepto.min.js"></script>
     <script src="./js/aui/script/api.js"></script>
+    <script>
+        $("body").on("click", ".captchapng", function() {
+            $(this).attr("src", "/captchapng?time=" + new Date().getTime());
+        });
+    </script>
 </body>
 
 </html>

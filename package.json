@@ -18,6 +18,7 @@
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-stage-3": "^6.5.0",
+    "captchapng": "0.0.1",
     "co": "^4.6.0",
     "cookie-parse": "^0.4.0",
     "debug": "^2.2.0",
