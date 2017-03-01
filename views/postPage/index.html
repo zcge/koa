@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="./js/aui/css/aui.css">
+    <style>
+        html,
+        form {
+            height: 100%;
+        }
+        
+        body {
+            height: inherit;
+        }
+        
+        .body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            height: inherit;
+            background-color: #a12;
+        }
+        
+        .title-box {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .title {
+            width: initial;
+            height: initial;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .flex-box {
+            flex-direction: column;
+            display: flex;
+            height: 100%;
+        }
+        
+        .content {
+            width: 100%;
+            flex: 10;
+            line-height: 1.5;
+            text-indent: 1rem;
+        }
+        
+        .postBtn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="postPageAction">
+        <div class="flex-box">
+            <header class="aui-bar aui-bar-nav">新建笔记</header>
+            <div class="title-box">
+                <textarea placeholder="标题" name="title" class="title" maxlength="10"></textarea>
+            </div>
+            <textarea placeholder="内容区域" name="content" class="content" maxlength="1000"></textarea>
+        </div>
+        <input class="aui-btn aui-btn-success postBtn" type="submit" value="提交" />
+    </form>
+    <script src="./js/zepto/dist/zepto.min.js"></script>
+    <script src="./js/aui/script/api.js"></script>
+</body>
+
+</html>

@@ -12,7 +12,6 @@
 
 <body>
     <header class="aui-bar aui-bar-nav">笔记工具</header>
-    <!--未登录-->
     <div class="hs-header aui-bg-indigo">
         <div class="hs-text-center">
             {% if (user.user_name)%}
@@ -28,9 +27,18 @@
             {% endif %}
         </div>
     </div>
-    <!--登陆后-->
     <div class="aui-content aui-margin-b-15">
         <ul class="aui-list aui-list-in">
+            <li class="aui-list-item">
+                <div class="aui-list-item-label-icon">
+                    <i class="aui-iconfont aui-icon-pencil"></i>
+                </div>
+                <div class="aui-list-item-inner aui-list-item-arrow">
+                    <div class="aui-list-item-title">
+                        <a href="./postPage">新增笔记</a>
+                    </div>
+                </div>
+            </li>
             <li class="aui-list-item">
                 <div class="aui-list-item-label-icon">
                     <i class="aui-iconfont aui-icon-pencil"></i>
@@ -60,13 +68,19 @@
     </div>
 
     <footer class="aui-bar aui-bar-tab" id="footer">
-        <div class="aui-bar-tab-item aui-active" tapmode>
+        <div class="aui-bar-tab-item" tapmode>
             <i class="aui-iconfont aui-icon-my"></i>
-            <div class="aui-bar-tab-label">我的</div>
+            <div class="aui-bar-tab-label">
+                <a href="./">
+                    我的
+                </a>
+            </div>
         </div>
-        <div class="aui-bar-tab-item " tapmode>
+        <div class="aui-bar-tab-item aui-activ" tapmode>
             <i class="aui-iconfont aui-icon-home"></i>
-            <div class="aui-bar-tab-label">首页</div>
+            <div class="aui-bar-tab-label">
+                <a href="./home">笔记</a>
+            </div>
         </div>
         <div class="aui-bar-tab-item" tapmode>
             <i class="aui-iconfont aui-icon-star"></i>

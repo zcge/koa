@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="./js/aui/css/aui.css">
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav"></header>
+    <p>
+
+    </p>
+    <script src={{ page.page_url }}></script>
+    <script src="./js/zepto/dist/zepto.min.js"></script>
+    <script src="./js/aui/script/api.js"></script>
+    <script>
+        $("p").html(article.content);
+        $(".aui-bar").html(article.title);
+    </script>
+</body>
+
+</html>
