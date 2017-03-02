@@ -1,4 +1,18 @@
 # koa
 
--[x] 1.处理url  koa-router
--[x] 2.post请求使用的是body 传递数据，所以要依赖koa-bodyparser来解析request里的body
+完成的工作
+
+- 1.处理url  koa-router
+- 2.post请求使用的是body 传递数据，所以要依赖koa-bodyparser来解析request里的body
+- 3.使用session完成登陆登出
+- 4.验证码的使用
+- 5.笔记的上传 和展示
+
+未完成的工作（接下来要做的事情）
+
+- 1.完成笔记的删除
+- 2.扩展笔记的展示规则
+- 3.设置笔记的权限（现在是不安全的）
+
+
+

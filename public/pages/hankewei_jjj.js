@@ -1,1 +1,0 @@
-var article = {"title":"jjj","content":"hdajhsdkajshdkjashdkad"}
