@@ -52,7 +52,8 @@
         </ul>
 
         <div style="margin:1rem auto;text-align: center;">
-            <input class="aui-btn aui-btn-success login-btn" type="submit" value="登陆" />
+            <!--<input class="aui-btn aui-btn-success login-btn" type="submit" value="登陆" />-->
+            <div class="aui-btn aui-btn-success login-btn">登陆</div>
             <div class="aui-btn aui-btn-primary"><a href="./register" style="color:#fff;">注册</a></div>
         </div>
     </form>
@@ -62,6 +63,9 @@
         $("body").on("click", ".captchapng", function() {
             $(this).attr("src", "/captchapng?time=" + new Date().getTime());
         });
+        $("body").on("click", ".login-btn", function() {
+            $("form").submit();
+        })
     </script>
 </body>
 
