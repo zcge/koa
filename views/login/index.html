@@ -12,7 +12,7 @@
 <body>
     <form method="post" action="loginAction">
         <ul class="aui-list aui-form-list">
-            <li class="aui-list-header">已登陆</li>
+            <li class="aui-list-header">登陆界面</li>
             <li class="aui-list-item">
                 <div class="aui-list-item-inner">
                     <div class="aui-list-item-label-icon">
@@ -52,7 +52,6 @@
         </ul>
 
         <div style="margin:1rem auto;text-align: center;">
-            <!--<input class="aui-btn aui-btn-success login-btn" type="submit" value="登陆" />-->
             <div class="aui-btn aui-btn-success login-btn">登陆</div>
             <div class="aui-btn aui-btn-primary"><a href="./register" style="color:#fff;">注册</a></div>
         </div>
@@ -60,12 +59,15 @@
     <script src="./js/zepto/dist/zepto.min.js"></script>
     <script src="./js/aui/script/api.js"></script>
     <script>
-        $("body").on("click", ".captchapng", function() {
+        $(".captchapng").click(function() {
             $(this).attr("src", "/captchapng?time=" + new Date().getTime());
         });
-        $("body").on("click", ".login-btn", function() {
+        $(".login-btn").click(function() {
             $("form").submit();
-        })
+        });
+        // $(document).on("click", ".login-btn", function() {
+        //     $("form").submit();
+        // });
     </script>
 </body>
 
